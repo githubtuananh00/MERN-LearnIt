@@ -1,0 +1,54 @@
+POST http://localhost:3000/auth/register
+Content-Type: application/json
+
+{
+    "username":"anh12",
+    "password":"123"
+}
+###
+
+
+
+POST  http://localhost:5000/auth/login
+Content-Type: application/json
+
+{
+    "username":"anh",
+    "password":"123"
+}
+
+###
+
+POST http://localhost:3000/post
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjQ4MDg2ZmVmOGIzOTRkMmY0ZTE5ZDIiLCJpYXQiOjE2NDg5MDY0NzB9.Nejlf198bnu9j11o5o2ks2yQYroWt3gkVu1VNSDDCjI
+
+{
+    "title":"test promise",
+    "description":"ReactJs",
+    "url":"mail.google.com"
+}
+
+###
+
+GET http://localhost:3000/post
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjQ4MDVkZjE2YjRkNmU4ZDUxYWZlZDgiLCJpYXQiOjE2NDg5MDcyMzV9.DASXfFTn4c1FcKKXPFmtiWqNTw6wKwAOfjneM-CvA_I
+
+###
+
+PUT http://localhost:3000/post/6248503234679c31bd7076de
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjQ4MDVkZjE2YjRkNmU4ZDUxYWZlZDgiLCJpYXQiOjE2NDg5MDcyMzV9.DASXfFTn4c1FcKKXPFmtiWqNTw6wKwAOfjneM-CvA_I
+
+{
+    "title":"my update second post",
+    "description":"update post",
+    "url":"facebook.com",
+    "status":"TO LEARN"
+}
+
+###
+DELETE http://localhost:3000/post/624bbd81dcb5ab7f2041ae1f
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjQ4MDVkZjE2YjRkNmU4ZDUxYWZlZDgiLCJpYXQiOjE2NDg5MDcyMzV9.DASXfFTn4c1FcKKXPFmtiWqNTw6wKwAOfjneM-CvA_I
