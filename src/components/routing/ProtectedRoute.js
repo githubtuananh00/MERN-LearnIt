@@ -15,9 +15,7 @@ const ProtectedRoute = ({ component: Component, ...rest }) => {
 				<Spinner animation='border' variant='info' />
 			</div>
 		)
-	}
-
-	if (isAuthenticated) {
+	} else if (isAuthenticated) {
 		return (
 			<>
 				<NavbarMenu />
@@ -31,22 +29,6 @@ const ProtectedRoute = ({ component: Component, ...rest }) => {
 			</Routes>
 		)
 	}
-	// return (
-	// 	<Routes>
-	// 		<Route
-	// 			path='*'
-	// 			element={(props) =>
-	// 				isAuthenticated ? (
-	// 					<>
-	// 						<Component {...rest} {...props} />
-	// 					</>
-	// 				) : (
-	// 					<Auth authRouter='login' />
-	// 				)
-	// 			}
-	// 		/>
-	// 	</Routes>
-	// )
 }
 
 export default ProtectedRoute

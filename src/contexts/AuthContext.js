@@ -43,6 +43,7 @@ const AuthContextReducer = ({ children }) => {
 		loadUser()
 	}, [])
 
+	// Login User
 	const loginUser = async (userForm) => {
 		try {
 			const response = await axios.post(`${apiUrl}/auth/login`, userForm)

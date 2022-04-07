@@ -1,18 +1,30 @@
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
 import imgMern from '../resources/mern.jpg'
+import { GITHUB_URL } from '../contexts/constants'
 
 const About = () => {
 	return (
-		<Card style={{ width: '18rem', marginTop: 150, marginLeft: 630 }}>
+		<Card style={{ width: '18rem', marginTop: 100, marginLeft: 630 }}>
 			<Card.Img variant='top' src={imgMern} />
 			<Card.Body>
 				<Card.Title>App MERN</Card.Title>
 				<Card.Text>
-					Some quick example text to build on the card title and make
-					up the bulk of the card's content.
+					<ul>
+						<li>
+							In my fullstack MERN APP using <b>Node JS</b>,
+							<b>React Js</b>, <b>Express</b> and <b>MongoDB</b>.
+						</li>
+						<li>
+							<b>React Js</b>, <b>react-bootstrap</b> and{' '}
+							<b>bootstrap</b> build the front end, <b>Node Js</b>{' '}
+							for the backend and <b>MongoDB</b> for the Database.
+						</li>
+					</ul>
 				</Card.Text>
-				<Button variant='primary'>Go somewhere</Button>
+				<Button variant='primary' href={GITHUB_URL}>
+					Go My Project
+				</Button>
 			</Card.Body>
 		</Card>
 	)
