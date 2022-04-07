@@ -16,10 +16,7 @@ const NavbarMenu = () => {
 	const handleLogout = () => logoutUser()
 	return (
 		<Navbar bg='primary' expand='lg' variant='dark' className='shadow'>
-			<Navbar.Brand
-				className='font-weight-bolder text-white'
-				href='#home'
-			>
+			<Navbar.Brand className='font-weight-bolder text-white' href='/'>
 				<img
 					src={learnItLogo}
 					alt='learnItLogo'
@@ -34,13 +31,13 @@ const NavbarMenu = () => {
 				<Nav className='me-auto'>
 					<Nav.Link
 						className='font-weight-bolder text-white'
-						href='dashboard'
+						href='/dashboard'
 					>
 						Home
 					</Nav.Link>
 					<Nav.Link
 						className='font-weight-bolder text-white'
-						href='about'
+						href='/about'
 					>
 						About
 					</Nav.Link>
